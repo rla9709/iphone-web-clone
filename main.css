@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
   color: rgb(29, 29, 31);
   letter-spacing: -0.05em;
-  background-color: white;
+  background-color: rgb(233, 232, 230);
 }
 
 p {
@@ -25,6 +25,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   height: 44px;
   padding: 0 1rem;
@@ -34,6 +35,7 @@ a {
   position: absolute;
   top: 45px;
   left: 0;
+  z-index: 11;
   width: 100%;
   height: 52px;
   border-bottom: 1px solid #ddd;
@@ -69,6 +71,9 @@ a {
 }
 
 #scroll-section-0 h1 {
+  position: relative;
+  top: -10vh;
+  z-index: 5;
   font-size: 4rem;
   text-align: center;
 }
@@ -114,12 +119,23 @@ a {
 .desc-message {
   width: 50%;
   font-weight: bold;
+  opacity: 0;
 }
 
 .pin {
   width: 1px;
   height: 100px;
   background: rgb(29, 29, 31);
+}
+
+#scroll-section-2 .b {
+  top: 10%;
+  left: 40%;
+}
+
+#scroll-section-2 .c {
+  top: 15%;
+  left: 45%;
 }
 
 .mid-message {
@@ -163,6 +179,17 @@ a {
   display: block;
 }
 
+.sticky-elem-canvas {
+  top: 0;
+  height: 100%;
+}
+
+.sticky-elem-canvas canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 @media (min-width: 1024px) {
   #scroll-section-0 h1 {
     font-size: 9vw;
@@ -190,6 +217,15 @@ a {
 
   .desc-message {
     width: 20%;
+  }
+
+  #scroll-section-2 .b {
+    top: 20%;
+    left: 53%;
+  }
+
+  #scroll-section-2 .c {
+    left: 55%;
   }
 
   .mid-message {
